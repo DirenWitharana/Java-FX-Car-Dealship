@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cw_fx.AminstratorPageController">
+   <children>
+      <Label layoutX="422.0" layoutY="14.0" text="Car Inventory">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableView" layoutX="12.0" layoutY="90.0" prefHeight="400.0" prefWidth="717.0">
+        <columns>
+          <TableColumn fx:id="colMake" prefWidth="100.0" text="Make" />
+          <TableColumn fx:id="colModel" prefWidth="100.0" text="Model" />
+            <TableColumn fx:id="colYear" prefWidth="65.0" text="Year" />
+            <TableColumn fx:id="colMileage" prefWidth="75.0" text="Mileage" />
+            <TableColumn fx:id="colOldOwner" prefWidth="100.0" text="Old Owner" />
+            <TableColumn fx:id="colAskPrice" prefWidth="100.0" text="Ask Price" />
+            <TableColumn fx:id="colSellPrice" prefWidth="100.0" text="Sell Price" />
+            <TableColumn fx:id="colAvailability" prefWidth="75.0" text="Availability" />
+        </columns>
+      </TableView>
+      <Button layoutX="28.0" layoutY="503.0" mnemonicParsing="false" onAction="#deleteCar" prefHeight="30.0" prefWidth="150.0" text="Delete Selected Car">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="228.0" layoutY="503.0" mnemonicParsing="false" onAction="#editCar" prefWidth="150.0" text="Edit Selected Car">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="431.0" layoutY="503.0" mnemonicParsing="false" prefWidth="150.0" text="Sell Selected Car">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Separator layoutX="740.0" layoutY="63.0" orientation="VERTICAL" prefHeight="626.0" prefWidth="11.0" />
+      <GridPane layoutX="751.0" layoutY="107.0" prefHeight="264.0" prefWidth="200.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Make" />
+            <Label text="Model" GridPane.rowIndex="1" />
+            <Label text="Year" GridPane.rowIndex="2" />
+            <Label text="Mileage" GridPane.rowIndex="3" />
+            <Label text="Old Owner" GridPane.rowIndex="4" />
+            <Label text="Ask Price" GridPane.rowIndex="5" />
+            <Label text="Sell Price" GridPane.rowIndex="6" />
+            <TextField fx:id="tfMake" promptText="Make" GridPane.columnIndex="1" />
+            <TextField fx:id="tfModel" promptText="Model" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="tfYear" promptText="Year" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="tfMileage" promptText="Mileage" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="tfOldOwner" promptText="Old Owner" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="tfAskPrice" promptText="Ask Price" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="tfSellPrice" promptText="Sell Price" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         </children>
+      </GridPane>
+      <Button fx:id="add" layoutX="798.0" layoutY="394.0" mnemonicParsing="false" onAction="#addCar" prefHeight="30.0" prefWidth="110.0" text="Add Car">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="save" layoutX="798.0" layoutY="442.0" mnemonicParsing="false" onAction="#saveCar" prefHeight="30.0" prefWidth="110.0" text="Save">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="798.0" layoutY="488.0" mnemonicParsing="false" onAction="#back" prefHeight="30.0" prefWidth="110.0" text="Back">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="14.0" layoutY="648.0" mnemonicParsing="false" onAction="#back" text="Back" />
+   </children>
+</AnchorPane>

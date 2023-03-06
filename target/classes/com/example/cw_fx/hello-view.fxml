@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cw_fx.HomePageController">
+   <left>
+      <AnchorPane prefHeight="250.0" prefWidth="280.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="customer" layoutX="93.0" layoutY="106.0" mnemonicParsing="false" onAction="#customerIn" prefHeight="50.0" prefWidth="120.0" text="Customer">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="250.0" prefWidth="280.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="employee" layoutX="92.0" layoutY="106.0" mnemonicParsing="false" onAction="#employeeIn" prefHeight="50.0" prefWidth="120.0" text="Employee">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </right>
+   <top>
+      <AnchorPane prefHeight="150.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="welcomeText" layoutX="103.0" layoutY="14.0" text="Welcome to the Car Dealership">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
